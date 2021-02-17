@@ -39,9 +39,11 @@ programa
 			}
 	
 			para(inteiro n = 0; n < 6; n++) {
-				escreva(numeros[n] + " ")
+				se (n < 5) {
+					escreva(numeros[n] + " - ")
+				}
 				se (n == 5) {
-					escreva("\n")
+					escreva(numeros[n] + "\n")
 				}
 			}
 		}
@@ -53,7 +55,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 236; 
+ * @POSICAO-CURSOR = 815; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = {numeros, 5, 9, 7}-{num, 6, 9, 3}-{flag, 6, 14, 4};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
