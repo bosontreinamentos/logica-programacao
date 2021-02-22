@@ -30,8 +30,8 @@ programa
 		}
 
 		// Algoritmo para pesquisa binária
-		inteiro inicial = 1
-		inteiro final = 10
+		inteiro inicial = 0
+		inteiro final = 9
 		inteiro meio
 		logico encontrado = falso
 		inteiro busca
@@ -54,7 +54,7 @@ programa
 			escreva("Valor encontrado no vetor.\n")
 		}
 		senao {
-			escreva("Valor inexisente.\n")
+			escreva("Valor inexistente.\n")
 		}
 
 
@@ -65,7 +65,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1103; 
+ * @POSICAO-CURSOR = 1233; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = {vet, 5, 9, 3}-{encontrado, 36, 9, 10};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
