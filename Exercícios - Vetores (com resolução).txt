@@ -1,0 +1,68 @@
+Exercícios: Vetores
+
+Crie os algoritmos para os itens a seguir, testando os programas no Portugol Studio.
+
+1. Ler 10 números e imprimi-los na ordem inversa da leitura, ou seja, o último número lido deve ser o primeiro impresso.
+
+2. Cadastrar 10 números de matrículas de alunos e armazená-los em um vetor. Esses números são distintos, ou seja, não podem existir números de matrículas iguais, e deve estar no intervalo de 100 a 200.
+Mostrar na tela as matrículas armazenadas, em ordem crescente.
+
+Resolução:
+programa {
+    
+    inteiro ALUNOS[10]
+    inteiro pos, mat, cont
+    caracter controle = 's'
+
+	funcao inicio() {
+	    para (pos = 0; pos < 10; pos++) {
+	        ALUNOS[pos] = 0
+	    } 
+		para (pos = 0; pos < 10; pos++) {
+                enquanto(verdadeiro) {
+	                escreva ("Digite o código de matrícula: ")
+	                leia(mat)
+	                para (cont = 0; cont < 10; cont++) {
+	                    se (mat == ALUNOS[cont]) {
+	                       escreva("Valor já existe\n")                        
+	                       controle = 'n'
+	                    }	                    
+	                }
+	                se ((mat < 100) ou (mat > 200)) {
+	                    	escreva("Valor inválido\n")                        
+	                       	controle = 'n'
+	                }
+	                se (controle != 'n') {
+	                    ALUNOS[pos] = mat
+	                    pare
+	                }         
+	               controle = 's'
+                }                                  
+        }
+    }
+}
+
+3. Crie um vetor de 5 números informados pelo usuário e monte outro vetor contendo os valores do primeiro multiplicados por 3. Mostrar os elementos de ambos os vetores na tela, lado a lado.
+Número	x3
+1	3
+2	6
+4	12
+5	15
+3	9
+
+4. Cadastrar 5 nomes de professores e seus respectivos tempos de profissão. Armazene esses valores em dois vetores: vetProfessor e vetTempoCasa.
+Mostrar os dados na tela, em uma tabela com os nomes dos professores na coluna à esquerda, e os tempos de profissão em uma coluna à direita.
+Professor	Tempo de Casa (anos)
+João		10
+Maria		15
+Ana		2
+Renata		8
+Jorge		22
+
+5. Um depósito armazena 8 produtos distintos, e para cada tipo de produto existe um código. Crie um algoritmo para ler o código do produto e a quantidade em estoque. Monte dois vetores para armazenar respectivamente os códigos das mercadorias e a quantidade dos produtos.
+Mostrar na tela os dados, em formato tabular.
+CodProduto	QtdeEstoque
+TV-01		9
+AS-03		7
+RF-14		3
+
