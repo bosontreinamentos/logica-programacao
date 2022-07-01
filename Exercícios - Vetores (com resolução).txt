@@ -8,39 +8,67 @@ Crie os algoritmos para os itens a seguir, testando os programas no Portugol Stu
 Mostrar na tela as matrículas armazenadas, em ordem crescente.
 
 Resolução:
-programa {
-    
-    inteiro ALUNOS[10]
-    inteiro pos, mat, cont
-    caracter controle = 's'
+programa
+{
+	
+inteiro alunos[10]
+	inteiro mat, pos, cont
+	caracter controle = 's'
+	funcao inicio()
+	{
+		para(pos = 0; pos < 10; pos++) {
+			enquanto(verdadeiro) {
+				escreva("Digite a matrícula: ")
+				leia(mat)
+				
+				// Verificar se matrícula já existe
+				para(cont = 0; cont < 10; cont++) {
+					se(mat == alunos[cont]) {
+						escreva("Valor já existe! Digite outro\n")
+						controle = 'n'
+					}
+				}
+	
+				// Verifica se número no intervalo válido
+				se ((mat < 100) ou (mat > 200)) {
+					escreva("Valor inválido!\n")
+					controle = 'n'
+				}
+	
+				// Se matrícula válida, efetivá-la
+				se (controle != 'n') {
+					alunos[pos] = mat
+					pare
+				}
 
-	funcao inicio() {
-	    para (pos = 0; pos < 10; pos++) {
-	        ALUNOS[pos] = 0
-	    } 
+				// Libera o cadastro de dados no vetor
+				controle = 's'
+			}
+			
+		}
+
+		// Ordenar valores e exibi-los na tela:
+		// Ordenação do vetor
+		inteiro aux
 		para (pos = 0; pos < 10; pos++) {
-                enquanto(verdadeiro) {
-	                escreva ("Digite o código de matrícula: ")
-	                leia(mat)
-	                para (cont = 0; cont < 10; cont++) {
-	                    se (mat == ALUNOS[cont]) {
-	                       escreva("Valor já existe\n")                        
-	                       controle = 'n'
-	                    }	                    
-	                }
-	                se ((mat < 100) ou (mat > 200)) {
-	                    	escreva("Valor inválido\n")                        
-	                       	controle = 'n'
-	                }
-	                se (controle != 'n') {
-	                    ALUNOS[pos] = mat
-	                    pare
-	                }         
-	               controle = 's'
-                }                                  
-        }
+			para (cont = pos + 1; cont < 10; cont++) {
+				se (alunos[pos] > alunos[cont]) {
+	      	 		aux = alunos[cont]
+	         			alunos[cont] = alunos[pos]
+					alunos[pos] = aux
+	       		 }
+	    		}
+		}
+	
+		// Exibição do resultado na tela
+		limpa()
+		escreva("Matrículas existentes: \n")
+		para(pos = 0; pos < 10; pos++) {
+			escreva(alunos[pos] + "\n")
+		}
     }
 }
+
 
 3. Crie um vetor de 5 números informados pelo usuário e monte outro vetor contendo os valores do primeiro multiplicados por 3. Mostrar os elementos de ambos os vetores na tela, lado a lado.
 Número	x3
