@@ -1,7 +1,8 @@
 programa
 {
-	inclua biblioteca Util
-	caracter figura[3]
+	inclua biblioteca Util --> u
+	caracter figura[3]
+	caracter sorteado[3] // opcional
 	inteiro numeros[3]
 	
 	funcao inicio()
@@ -19,10 +20,20 @@ programa
 		}
 
 		// Mostrar figuras
+		escreva("Vamos lá, boa sorte!\n")
 		para(inteiro i = 0; i < 3; i++) {
 			escreva(figura[numeros[i]] + " ")
+			sorteado[i] = figura[numeros[i]] // opcional
+			u.aguarde(1500)
 		}
-		// TODO: verificar se os três símbolos são iguais e dar prêmio se forem.
+		// Para alunos fazerem: verificar se os três símbolos são iguais e dar prêmio se forem.
+		//se ((sorteado[0] == sorteado[1]) e (sorteado[1] == sorteado[2])) { // opcional
+		se ((figura[numeros[0]] == figura[numeros[1]]) e (figura[numeros[1]] == figura[numeros[2]])) {
+			escreva("\nParabéns, você ganhou o prêmio!!!\n")
+		}
+		senao {
+			escreva("\nInfelizmente não foi dessa vez! Tente novamente!\n")
+		}
 		
 	}
 
