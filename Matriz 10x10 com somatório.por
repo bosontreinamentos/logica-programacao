@@ -2,7 +2,7 @@ programa
 {
 	inclua biblioteca Util --> u
 	
-	inteiro matriz[10][104]
+	inteiro matriz[10][10]
 	inteiro lin, col, soma = 0
 
 	funcao inicio()
