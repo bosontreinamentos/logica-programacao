@@ -11,6 +11,10 @@ programa
 		para (inteiro i = 0; i < num; i++) {
 			escreva(fibonacci(i) + " ")
 		}
+
+		// Mostrar o n-ésimo fibonacci
+		escreva("\nO " + num + "º Fibonacci é ")
+		escreva(fibonacci(num))
 	}
 
 	// Função fibonacci
